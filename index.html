@@ -322,6 +322,20 @@
             background: white;
              box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         }
+        
+        #splashscreen {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-image: url(screen/android/screen-xhdpi-landscape.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgb(255, 255, 255);
+        }
     </style>
     <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
     <link href="gwdvideo_style.css" data-version="5" data-exports-type="gwd-video" rel="stylesheet">
@@ -521,6 +535,7 @@
 
             <div class="gwd-div-1u47" id="close">x</div>
         </div>
+    <!--<div  id="splashscreen" style="">-->
 
     </div>
 
@@ -540,6 +555,9 @@
         };
 
         $(document).ready(function () {
+             /*setTimeout(function() {
+                 $('#splashscreen').hide();
+             }, 1500);*/
 
             // hide routine panel
             $('#routine').hide();
