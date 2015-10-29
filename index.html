@@ -170,23 +170,22 @@
         .gwd-div-suk4 {
             position: relative;
             float: left;
-            margin-top: 3%;
-            height: 92%;
-            margin-left: 2%;
-            width: 96%;
-            border-radius: 5px;
+            height: 100%;
+            width: 100%;
             background-image: none;
-            background-color: rgba(250, 250, 250, 0.8);
-            
+            background-color: rgba(250, 250, 250, 0.5);
         }
         
         .gwd-video-18oz {
-            padding-top: 2.5%;
-            height: 90%;
+            height: 96%;
             margin: 0px auto;
             display: table-cell;
             text-align: center;
             vertical-align: middle;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-top: 1%;
+            border: 1px solid black;
         }
         
         .gwd-div-d5ad {
@@ -261,7 +260,7 @@
             height: 50px;
             border: 1px solid #6D6D6D;
             border-radius: 50%;
-            right: 5%;
+            left: 90%;
             background-image: none;
             background-color: rgb(255, 255, 255);
             font-family: Roboto;
@@ -269,7 +268,7 @@
             text-align: center;
             line-height: 150%;
             cursor: pointer;
-             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         }
         
         .gwd-div-srpl {
@@ -286,7 +285,7 @@
             line-height: 168%;
             cursor: pointer;
             background: white;
-             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         }
         
         .gwd-div-1gbj {
@@ -303,7 +302,7 @@
             line-height: 168%;
             cursor: pointer;
             background: white;
-             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         }
         
         .gwd-div-nnlo {
@@ -320,7 +319,7 @@
             line-height: 168%;
             cursor: pointer;
             background: white;
-             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         }
         
         #splashscreen {
@@ -348,36 +347,35 @@
     <script data-source="gwdimagebutton_min.js" data-version="4" data-exports-type="gwd-imagebutton" type="text/javascript" src="gwdimagebutton_min.js"></script>
     <script data-source="gwdvideo_min.js" data-version="5" data-exports-type="gwd-video" type="text/javascript" src="gwdvideo_min.js"></script>
 
-    <script type="text/javascript" src="jquery.js"></script>    
+    <script type="text/javascript" src="jquery.js"></script>
 
 </head>
 
 <body>
     <div id="app" class="app-stretch">
         <div class="gwd-div-3eb5" id="header" style="">
-            <div class="gwd-div-rdsn" id="h1" style="">VIDEO GYMNASTICS</div>
-            <div class="gwd-div-d8ml" id="h2">Welcome Bob! Let's get moving!</div>
+            <div class="gwd-div-rdsn" id="h1" style="">VIDEO GYMNASTIEK</div>
+            <div class="gwd-div-d8ml" id="h2">Welkom! Laten we verhuizen!</div>
         </div>
         <div class="gwd-div-19nn" id="body">
             <div class="gwd-imagebutton-1e5o" id="vt-we-recommend-wrap">
-                <gwd-imagebutton id="vt-we-recommend" over-image="" scaling="cover" class="gwd-div-d5ad" data-gwd-name="we recommend" up-image="1.jpg" down-image="1-down.jpg">
-                </gwd-imagebutton>
-                <div class="gwd-div-17np" style="">We Recommend</div>
+                <img id="vt-we-recommend" class="gwd-div-d5ad" src="1.jpg">
+                <div class="gwd-div-17np" style="">Wij raden</div>
             </div>
             <div class="gwd-imagebutton-rlx2" id="vt-your-favorite-wrap">
-                <gwd-imagebutton id="vt-your-favorite" up-image="2.jpg" over-image="" scaling="cover" class="gwd-div-d5ad" data-gwd-name="your favorite" down-image="2-down.jpg">
-                </gwd-imagebutton>
-                <div class="gwd-div-17np" style="">Your Favorite</div>
+                <img id="vt-your-favorite" src="2.jpg" class="gwd-div-d5ad">
+
+                <div class="gwd-div-17np" style="">Je favoriet</div>
             </div>
             <div class="gwd-imagebutton-1mkg" id="vt-better-breathing-wrap">
-                <gwd-imagebutton id="vt-better-breathing" up-image="3.jpg" over-image="" down-image="3-down.jpg" scaling="cover" class="gwd-div-d5ad">
-                </gwd-imagebutton>
-                <div class="gwd-div-17np" style="">Better Breathing</div>
+                <img id="vt-better-breathing" src="3.jpg" class="gwd-div-d5ad">
+
+                <div class="gwd-div-17np" style="">Betere ademhaling</div>
             </div>
             <div class="gwd-imagebutton-j5wk" id="vt-better-strength-wrap">
-                <gwd-imagebutton id="vt-better-strength" up-image="4.jpg" over-image="" down-image="4-down.jpg" scaling="cover" class="gwd-div-d5ad" data-gwd-name="better strength">
-                </gwd-imagebutton>
-                <div class="gwd-div-17np" style="">Better Strength</div>
+                <img id="vt-better-strength" src="4.jpg" class="gwd-div-d5ad">
+
+                <div class="gwd-div-17np" style="">Betere sterkte</div>
             </div>
         </div>
         <div class="gwd-div-e0dw" id="footer"></div>
@@ -388,24 +386,20 @@
             <!-- video:1 -->
             <div class="gwd-div-suk4" id="video1">
                 <video id="gwd-video_1" webkit-playsinline controls class="gwd-video-18oz">
-                 <source src="video2.mp4" type="video/mp4">
-                    
-                 <track src="video2_en.vtt" kind="subtitles" default data-state="active" srclang="en" label="English"> </track>
+                    <source id="video-source" type="video/mp4">
+                    <!-- src="video2.mp4" -->
                 </video>
                 <!-- <div class="gwd-div-14ac" id="subtitles" style="">Standing up, turn your head to the right</div> -->
 
-                <div class="gwd-div-srpl rest" id="rest-1">REST</div>
-                <!-- <div class="gwd-div-1gbj" id="prev-1">PREV.</div>  -->
-                <div class="gwd-div-nnlo next" id="next-1">NEXT</div>
 
             </div>
 
             <!-- rest:1 -->
             <div class="gwd-div-suk4 rest" id="rest1">
-                <div class="gwd-div-1w5r" style="">Rest Time
+                <div class="gwd-div-1w5r" style="">Rusttijd
                     <br> <span style="font-size: 120px;" id="timer1"></span>
                 </div>
-                <div class="gwd-div-6lr1 enjoy-rating" id="">How much did you enjoy this exercise?
+                <div class="gwd-div-6lr1 enjoy-rating" id="">Hoeveel heb je genieten van deze oefening?
                     <br>
                     <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☆ </span>
                     <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☆ </span>
@@ -413,107 +407,24 @@
                     <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☆ </span>
                     <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☆ </span>
                 </div>
-                <div class="gwd-div-6lr1 difficulty-rating" id="">How difficult was this exercise?
+                <div class="gwd-div-6lr1 difficulty-rating" id="">Hoe moeilijk was deze oefening?
                     <br>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="3"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☆ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☖ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☖ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="3"> ☖ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☖ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☖ </span>
                 </div>
-
-
-                <!-- <div class="gwd-div-1gbj" id="prev-2">PREV.</div> -->
-                <div class="gwd-div-nnlo next" id="next-2">NEXT</div>
-
-
-            </div>
-
-            <!-- video:2 -->
-            <div class="gwd-div-suk4" id="video2">
-                <video id="gwd-video_2" webkit-playsinline controls class="gwd-video-18oz" src="https://myhealthframe.nl/videos/video12.mp4">
-                    <track src="video12_en.vtt" default kind="subtitles" srclang="en" label="English">
-                </video>
-                <!--<div class="gwd-div-14ac" id="subtitle" style="">Standing up, turn your head to the right</div>-->
-
-                <div class="gwd-div-srpl rest" id="rest-3">REST</div>
-                <div class="gwd-div-1gbj prev" id="prev-3">PREV.</div>
-                <div class="gwd-div-nnlo next" id="next-3">NEXT</div>
-            </div>
-
-            <!-- rest:2 -->
-            <div class="gwd-div-suk4 rest" id="rest2">
-                <div class="gwd-div-1w5r" style="">Rest Time
-                    <br> <span style="font-size: 120px;" id="timer2"></span>
-                </div>
-                <div class="gwd-div-6lr1 enjoy-rating" id="">How much did you enjoy this exercise?
-                    <br>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="3"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☆ </span>
-                </div>
-                <div class="gwd-div-6lr1 difficulty-rating" id="">How difficult was this exercise?
-                    <br>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="3"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☆ </span>
-                </div>
-
-
-                <!-- <div class="gwd-div-1gbj" id="prev-4">PREV.</div> -->
-                <div class="gwd-div-nnlo next" id="next-4">NEXT</div>
-            </div>
-
-            <!-- video:3 -->
-            <div class="gwd-div-suk4" id="video3">
-                <video id="gwd-video_3" webkit-playsinline controls class="gwd-video-18oz" src="https://myhealthframe.nl/videos/video2.mp4">
-                <track src="video2_en.vtt" kind="subtitles" srclang="en" label="English">
-                </video>
-                <!-- <div class="gwd-div-14ac" id="subtitle" style="">Standing up, turn your head to the right</div> -->
-
-                <div class="gwd-div-srpl rest" id="rest-5">REST</div>
-                <div class="gwd-div-1gbj prev" id="prev-5">PREV.</div>
-                <div class="gwd-div-nnlo next" id="next-5">END</div>
-            </div>
-            <!-- rest:3 -->
-            <div class="gwd-div-suk4 rest" id="rest3">
-                <div class="gwd-div-1w5r" style="">Rest Time
-                    <br> <span style="font-size: 120px;" id="timer3"> </span>
-                </div>
-                <div class="gwd-div-6lr1 enjoy-rating" id="">How much did you enjoy this exercise?
-                    <br>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="3"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☆ </span>
-                </div>
-                <div class="gwd-div-6lr1 difficulty-rating" id="">How difficult was this exercise?
-                    <br>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="3"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☆ </span>
-                </div>
-
-
-                <!-- <div class="gwd-div-1gbj" id="prev-6">PREV.</div> -->
-                <div class="gwd-div-nnlo next" id="next-6">END</div>
             </div>
 
             <!-- end:1 -->
             <div class="gwd-div-suk4" id="end">
-                <div class="gwd-div-1w5r" id="timer" style="">End of Routine
+                <div class="gwd-div-1w5r" id="timer" style="">Einde van Routine
                     <br>
-                    <span style="font-size: 120px;">Done</span>
+                    <span style="font-size: 120px;">Klaar</span>
                     <span style="font-size: 120px; color: green;"> ♕ </span>
                 </div>
-                <div class="gwd-div-6lr1 enjoy-rutine-rating" id="">How much did you enjoy this exercise?
+                <div class="gwd-div-6lr1 enjoy-rutine-rating" id="">Hoeveel heb je genieten van deze oefening?
                     <br>
                     <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☆ </span>
                     <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☆ </span>
@@ -521,155 +432,192 @@
                     <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☆ </span>
                     <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☆ </span>
                 </div>
-                <div class="gwd-div-6lr1 difficulty-rutine-rating" id="">How difficult was this exercise?
+                <div class="gwd-div-6lr1 difficulty-rutine-rating" id="">Hoe moeilijk was deze oefening?
                     <br>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="3"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☆ </span>
-                    <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☆ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="1"> ☖ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="2"> ☖ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="3"> ☖ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="4"> ☖ </span>
+                    <span style="font-size: 40px; cursor:pointer;" data-star-count="5"> ☖ </span>
                 </div>
 
 
-                <div class="gwd-div-1gbj" style="left:50%; margin-left:-30px; top: 90%;" id="prev-7">BACK</div>
+                <div class="gwd-div-1gbj close" style="left:50%; margin-left:-30px; top: 90%;" id="prev-7">Stoppen</div>
 
             </div>
 
-            <div class="gwd-div-1u47" id="close">x</div>
+            <div class="gwd-div-1u47 close" id="close">x</div>
         </div>
-    <!--<div  id="splashscreen" style="">-->
 
     </div>
 
     <script>
-              
+        var videoSet = [];
+        var videoIndex = 0;
+        var quitTraining;
+
         function startTimer(elementId, time) {
             var currentTimeCount = time;
             $(elementId).html(currentTimeCount + " sec.");
             var timer = setInterval(function () {
                 currentTimeCount--;
                 $(elementId).html(currentTimeCount + " sec.");
-                if (currentTimeCount == 0) {
-                    $(elementId).parents('.rest').children('.next').trigger('click');
+                console.log("timer - quitTraining:" + quitTraining );
+
+                if (quitTraining == false) {
+                    if (currentTimeCount == 0) {
+                        // show next video [todo]
+                        setVideo(videoIndex, videoSet.length);
+
+                        console.log('videoIndex: ' + videoIndex);
+                        // set source for the first video, only after a successful ajax response
+                        setTimeout(function () {
+
+                            clearRatings();
+
+                        }, 100);
+
+                        clearInterval(timer);
+
+                    }
+                } else {
                     clearInterval(timer);
                 }
-            }, time * 100);
+            }, 1000);
         };
 
+        function getVideoSet() {
+            $.ajax({
+                url: 'https://myhealthframe.nl:8443/ParsWebService/services/pars',
+                data: JSON.stringify({
+                    jsonrpc: '2.0',
+                    method: 'getRecommendedExercises',
+                    params: ['2262c098-4e43-46f9-bb7d-0d7ee62fca7e', 'Alex'],
+                    id: "jsonrpc"
+                }), // id is needed !!
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    // get the new rutine
+                    videoSet = data.result;
+                    console.log(videoSet);
+                    // reset the video index
+                    videoIndex = 0;
+                    setVideo(videoIndex, videoSet.length);
+
+                    // start playout
+                    $('#routine').fadeIn();
+                    // set source for the first video, only after a successful ajax response
+                    setTimeout(function () {
+                        $('#video1').fadeIn(function () {
+                            $(this).trigger("fadeInComplete");
+                        });
+                    }, 100);
+                },
+                error: function (err) {
+                    alert("ERROR: The system is not functioning. Please try again later.");
+                }
+
+            });
+        };
+
+        function setVideo(index, length) {
+            if (index == length - 1) {
+                $('#video1').hide();
+                $('#rest1').hide();
+                $('#end').fadeIn();
+            } else {
+                $('#video-source').attr('src', videoSet[index].videoURL);
+                $('#gwd-video_1')[0].load();
+                console.log('setting video: ' + videoSet[index].videoURL);
+            }
+        };
+
+        function clearRatings() {
+            var clear = {
+                color: 'black'
+            };
+
+            $('.enjoy-rating > span').css(clear);
+            $('.enjoy-rating > span').html(' ☆ ');
+
+            $('.difficulty-rating > span').css(clear);
+            $('.difficulty-rating > span').html(' ☖ ');
+
+        }
+
         $(document).ready(function () {
-             /*setTimeout(function() {
-                 $('#splashscreen').hide();
-             }, 1500);*/
+            /*setTimeout(function() {
+                $('#splashscreen').hide();
+            }, 1500);*/
 
             // hide routine panel
             $('#routine').hide();
 
+
             $('#video1').on('fadeInComplete', function () {
                 //alert("I should play");
+                // setVideo(videoIndex);
+                videoIndex++;
+
                 $(this).children('video').get(0).currentTime = 0;
                 $(this).children('video').get(0).play(0);
             })
 
-            $('#video2').on('fadeInComplete', function () {
-                //alert("I should play");
-                $(this).children('video').get(0).currentTime = 0;
-                $(this).children('video').get(0).play(0);
-            })
-
-            $('#video3').on('fadeInComplete', function () {
-                // alert("I should play");
-                $(this).children('video').get(0).currentTime = 0;
-                $(this).children('video').get(0).play();
-            })
 
 
             // add main vt buttons click events handlers
             $('#vt-we-recommend-wrap').on('click', function () {
-                $('#routine').fadeIn();
+
+                getVideoSet();
+
+                quitTraining = false;
+                console.log("we recommend - quitTraining:" + quitTraining );
 
                 $('#video1').hide();
-                $('#video2').hide();
-                $('#video3').hide();
-
                 $('#rest1').hide();
-                $('#rest2').hide();
-                $('#rest3').hide();
-
                 $('#end').hide();
-
-                setTimeout(function () {
-                    $('#video1').fadeIn(function () {
-                        $(this).trigger("fadeInComplete");
-                    });
-                }, 100);
-
 
             });
 
             // add main vt buttons click events handlers
             $('#vt-your-favorite-wrap').on('click', function () {
-                $('#routine').fadeIn();
 
+                getVideoSet();
+
+                quitTraining = false;
 
                 $('#video1').hide();
-                $('#video2').hide();
-                $('#video3').hide();
-
                 $('#rest1').hide();
-                $('#rest2').hide();
-                $('#rest3').hide();
-
                 $('#end').hide();
 
-                setTimeout(function () {
-                    $('#video1').fadeIn(function () {
-                        $(this).trigger("fadeInComplete");
-                    });
-                }, 100);
             });
 
             // add main vt buttons click events handlers
             $('#vt-better-breathing-wrap').on('click', function () {
-                $('#routine').fadeIn();
 
+                getVideoSet();
+
+                quitTraining = false;
 
                 $('#video1').hide();
-                $('#video2').hide();
-                $('#video3').hide();
-
                 $('#rest1').hide();
-                $('#rest2').hide();
-                $('#rest3').hide();
-
                 $('#end').hide();
 
-                setTimeout(function () {
-                    $('#video1').fadeIn(function () {
-                        $(this).trigger("fadeInComplete");
-                    });
-                }, 100);
+                
             });
 
             // add main vt buttons click events handlers
             $('#vt-better-strength-wrap').on('click', function () {
-                $('#routine').fadeIn();
 
+                getVideoSet();
+
+                quitTraining = false;
 
                 $('#video1').hide();
-                $('#video2').hide();
-                $('#video3').hide();
-
                 $('#rest1').hide();
-                $('#rest2').hide();
-                $('#rest3').hide();
-
                 $('#end').hide();
 
-                setTimeout(function () {
-                    $('#video1').fadeIn(function () {
-                        $(this).trigger("fadeInComplete");
-                    });
-                }, 100);
             });
 
 
@@ -694,15 +642,15 @@
             $('.difficulty-rating > span').on('click', function () {
                 //alert('Zing!');
                 var selected = {
-                    color: 'orange'
+                    color: '#59506F'
                 };
                 var not_selected = {
                     color: 'black'
                 };
 
-                $(this).prevAll().css(selected).html(' ★ ');
-                $(this).css(selected).html(' ★ ');
-                $(this).nextAll().css(not_selected).html(' ☆ ');
+                $(this).prevAll().css(selected).html(' ☗ ');
+                $(this).css(selected).html(' ☗ ');
+                $(this).nextAll().css(not_selected).html(' ☖ ');
 
 
             });
@@ -710,15 +658,15 @@
             $('.difficulty-rutine-rating > span').on('click', function () {
                 //alert('Zing!');
                 var selected = {
-                    color: 'orange'
+                    color: '#59506F'
                 };
                 var not_selected = {
                     color: 'black'
                 };
 
-                $(this).prevAll().css(selected).html(' ★ ');
-                $(this).css(selected).html(' ★ ');
-                $(this).nextAll().css(not_selected).html(' ☆ ');
+                $(this).prevAll().css(selected).html(' ☗ ');
+                $(this).css(selected).html(' ☗ ');
+                $(this).nextAll().css(not_selected).html(' ☖ ');
 
 
             });
@@ -739,145 +687,51 @@
 
             });
 
-            $('#close').on('click', function () {
+            $('.close').on('click', function () {
                 // stop video play, if any
                 // stopVideo();
                 
+                quitTraining = true;
+                console.log("close btn - quitTraining:" + quitTraining );
+
                 // pause all videos
                 $('#routine').find('#gwd-video_1').get(0).pause();
-                $('#routine').find('#gwd-video_2').get(0).pause();
-                $('#routine').find('#gwd-video_3').get(0).pause();
 
                 // hide routine panel
                 $('#routine').hide();
-                
+
             });
 
             $('video').on('ended', function () {
-                $(this).parent().children('.rest').trigger('click');
-            });
-
-
-
-            // navigation button hanflers;
-            // this should be changed to more generalistic algorithms
-            $('#rest-1').on('click', function () {
-                //$('#gwd-video_1').stop();
-                //alert("Rest 1");
+                // when the video ends, show the rest screen
                 $('#video1').children('video').get(0).pause();
                 $('#video1').hide();
-                
+
                 $('#rest1').fadeIn();
-                startTimer('#timer1', 8);
+                startTimer('#timer1', videoSet[videoIndex-1].setCount * videoSet[videoIndex-1].repetitionCount * 10);
             });
 
-            $('#next-1').on('click', function () {
-                $('#video1').children('video').get(0).pause();
-                $('#video1').hide();
-                
-                $('#video2').fadeIn(function () {
-                    $(this).trigger("fadeInComplete");
-                });
-            });
+            /* $('video').bind('loadeddata', function () {
+                 alert('Loaded video');
+                 setTimeout(function () {
+                         $('#video1').fadeIn(function () {
+                             $(this).trigger("fadeInComplete");
+                         });
+                     }, 100);
+                 }, false);
+                 */
+            var video = document.getElementById('gwd-video_1');
+            video.addEventListener('loadeddata', function () {
+                // Video is loaded and can be played
+                // alert('Loaded video');
+                setTimeout(function () {
+                    $('#video1').fadeIn(function () {
+                        $(this).trigger("fadeInComplete");
+                    });
+                }, 100);
+            }, false);
 
-            /* $('#prev-2').on('click', function () {                
-                $('#rest1').hide();
-                $('#video1').fadeIn();
-            }); */
 
-            $('#next-2').on('click', function () {
-                //$('#video1').fadeIn();
-                $('#rest1').hide();
-                $('#video2').fadeIn(function () {
-                    $(this).trigger("fadeInComplete");
-                });
-            });
-
-            $('#prev-3').on('click', function () {
-                $('#video2').children('video').get(0).pause();
-                $('#video2').hide();
-                
-                $('#video1').fadeIn(function () {
-                    $(this).trigger("fadeInComplete");
-                });
-            });
-
-            $('#rest-3').on('click', function () {
-                //$('#video1').fadeIn();
-                $('#video2').children('video').get(0).pause();
-                $('#video2').hide();
-                
-                $('#rest2').fadeIn();
-                startTimer('#timer2', 10);
-            });
-
-            $('#next-3').on('click', function () {
-                //$('#video1').fadeIn();
-                $('#video2').children('video').get(0).pause();
-                $('#video2').hide();
-                
-                $('#video3').fadeIn(function () {
-                    $(this).trigger("fadeInComplete");
-                });
-            });
-
-            /* $('#prev-4').on('click', function () {
-                $('#video2').fadeIn();                
-            });*/
-
-            $('#next-4').on('click', function () {
-                $('#rest2').hide();
-                $('#video3').fadeIn(function () {
-                    $(this).trigger("fadeInComplete");
-                });
-            });
-
-            $('#prev-5').on('click', function () {
-                $('#video3').children('video').get(0).pause();
-                $('#video3').hide();                
-                
-                $('#video2').fadeIn(function () {
-                    $(this).trigger("fadeInComplete");
-                });
-            });
-
-            $('#rest-5').on('click', function () {
-                $('#video3').children('video').get(0).pause();
-                $('#video3').hide();
-                
-                $('#rest3').fadeIn();
-                startTimer('#timer3', 5);
-            });
-
-            $('#next-5').on('click', function () {
-                $('#video3').children('video').get(0).pause();
-                $('#video3').hide();
-                
-                $('#end').fadeIn();
-            });
-
-            /* $('#prev-6').on('click', function () {
-                  
-             }); */
-
-            $('#next-6').on('click', function () {
-                $('#rest3').hide();
-                $('#end').fadeIn();
-            });
-
-            $('#prev-7').on('click', function () {
-                $('#routine').fadeOut();
-
-                $('#video1').hide();
-                $('#video2').hide();
-                $('#video3').hide();
-
-                $('#rest1').hide();
-                $('#rest2').hide();
-                $('#rest3').hide();
-
-                $('#end').hide();
-            });
 
         });
     </script>
