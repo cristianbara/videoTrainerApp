@@ -702,8 +702,8 @@
                         visitId: '2262c098-4e43-46f9-bb7d-0d7ee62fca7e',
                         userId: 'Alex',
                         rateType: 1,
-                        exerciseId: parseFloat(videoSet[videoIndex-1].exerciseId),
-                        rating: count
+                        exerciseId: videoSet[videoIndex-1].exerciseId,
+                        rating: parseFloat(count)
                                  }
                     console.log('sent feedback:'); 
                     console.log(rating);
