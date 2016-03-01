@@ -434,6 +434,36 @@
                 var not_selected = {
                     color: 'dimgray'
                 };
+<<<<<<< HEAD
+=======
+                
+                var count = 0;
+                count = $(this).data('star-count');
+                // send enjoyment feedback to PARS
+                $.ajax({
+                url: 'https://myhealthframe.nl/ParsWebService/services/pars',
+                data: JSON.stringify({
+                    jsonrpc: '2.0',
+                    method: 'saveRating',
+                    params: ['2262c098-4e43-46f9-bb7d-0d7ee62fca7e', 'Alex', videoSet[videoIndex-1].exerciseId, 2, parseFloat(count)],
+                    id: "jsonrpc"
+                }), // id is needed !!
+                type: "POST",
+                dataType: "json",
+                success: function () { 
+                
+                    var rating = {
+                        visitId: '2262c098-4e43-46f9-bb7d-0d7ee62fca7e',
+                        userId: 'Alex',
+                        
+                        exerciseId: videoSet[videoIndex-1].exerciseId,
+                        rateType: 2,
+                        rating: parseFloat(count)
+                                 }
+                    console.log('sent feedback:'); 
+                    console.log(rating);
+                
+>>>>>>> origin/master
 
                 enjoy_count = 0;
                 enjoy_count = $(this).data('star-count');
@@ -455,6 +485,36 @@
                 var not_selected = {
                     color: 'dimgray'
                 };
+<<<<<<< HEAD
+=======
+                
+                var count = 0;
+                count = $(this).data('star-count');
+                // send enjoyment feedback to PARS
+                $.ajax({
+                url: 'https://myhealthframe.nl/ParsWebService/services/pars',
+                data: JSON.stringify({
+                    jsonrpc: '2.0',
+                    method: 'saveRating',
+                    params: ['2262c098-4e43-46f9-bb7d-0d7ee62fca7e', 'Alex', videoSet[videoIndex-1].exerciseId, 1, parseFloat(count)],
+                    id: "jsonrpc"
+                }), // id is needed !!
+                type: "POST",
+                dataType: "json",
+                success: function () { 
+                
+                    var rating = {
+                        visitId: '2262c098-4e43-46f9-bb7d-0d7ee62fca7e',
+                        userId: 'Alex',
+                        
+                        exerciseId: videoSet[videoIndex-1].exerciseId,
+                        rateType: 1,
+                        rating: parseFloat(count)
+                                 }
+                    console.log('sent feedback:'); 
+                    console.log(rating);
+                
+>>>>>>> origin/master
 
                 dificulty_count = 0;
                 dificulty_count = $(this).data('star-count');
