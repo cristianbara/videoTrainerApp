@@ -65,6 +65,25 @@ var wasRated = false;
 var wasEnjoymentRating = false;
 var wasDifficultyRating = false;
 
+var interimTimerObj;
+var interimTimerPaused = false;
+
+function InterimTimer(callback, delay) {
+    var timerId, start, remaining = delay;
+
+    this.pause = function() {
+        window.clearTimeout(timerId);
+        remaining -= new Date() - start;
+    };
+
+    this.resume = function() {
+        start = new Date();
+        if (timerId) {window.clearTimeout(timerId);}
+        timerId = window.setTimeout(callback, remaining);
+    };
+
+    this.resume();
+}
 
 function generateUUID() {
     var d = new Date().getTime();
@@ -150,11 +169,9 @@ function startTimer(elementId, wasRated, time) {
 
                     clearInterval(timer);
 
-                }
-                else {
+                } else {
                     if (wasRated) { // block the video until it gets rated
-                    }
-                    else { // clear the interval
+                    } else { // clear the interval
                         // show next video [todo]
                         setVideo(videoIndex, videoSet.length);
 
@@ -172,7 +189,7 @@ function startTimer(elementId, wasRated, time) {
                 }
 
             } else {
-                
+
             }
         } else {
             clearInterval(timer);
@@ -271,15 +288,25 @@ function setVideo(index, length) {
         isRepeating = false;
         console.log('setting video: ' + videoSet[index].videoURL);
         $('#rest1').hide();
-        
+
         //reset flags for rating
         wasDifficultyRating = false;
         wasEnjoymentRating = false;
+        
+        //reset the intermTimerobj
+        interimTimerObj = null;
     };
 
     enjoy_count = -1;
     dificulty_count = -1;
-     videoIndex++;
+
+    // -- remove this before deploy --
+    if (videoIndex == 1) {
+        videoIndex = 5
+    }
+    // ----
+
+    videoIndex++;
     // force video trainer into last state
     //videoIndex = length - 1;
 };
@@ -311,7 +338,7 @@ $(document).ready(function () {
     /*setTimeout(function() {
         $('#splashscreen').hide();
     }, 1500);*/
-   
+
     // hide routine panel
     $('#routine').hide();
 
@@ -412,7 +439,7 @@ $(document).ready(function () {
         $(this).prevAll('span').css(selected).html('<i class="material-icons">star</i>');
         $(this).css(selected).html('<i class="material-icons">star</i>');
         $(this).nextAll('span').css(not_selected).html('<i class="material-icons">star_border</i>');
-        
+
         wasEnjoymentRating = true;
 
 
@@ -434,7 +461,7 @@ $(document).ready(function () {
         $(this).prevAll('span').css(selected).html('<i class="material-icons">fitness_center</i>');
         $(this).css(selected).html('<i class="material-icons">fitness_center</i>');
         $(this).nextAll('span').css(not_selected).html('<i class="material-icons">fitness_center</i>');
-        
+
         wasDifficultyRating = true;
 
     });
@@ -595,13 +622,13 @@ $(document).ready(function () {
                     alert("ERROR: The system is not functioning. Please try again later.");
                 }
 
-            }); 
-            
+            });
+
         } catch (err) {
             console.log('Error sending difficulty count.');
             console.log(err);
         };
-        
+
         // send peronalized routine rating                      
         try {
 
@@ -622,8 +649,8 @@ $(document).ready(function () {
                     alert("ERROR: The system is not functioning. Please try again later.");
                 }
 
-            }); 
-            
+            });
+
         } catch (err) {
             console.log('Error sending personalized count.');
             console.log(err);
@@ -653,7 +680,9 @@ $(document).ready(function () {
     var repetitionTimer = setInterval(function () {
         if (isRepeating) {
             if ($('#video-description-timer').html() > 0) {
-                $('#video-description-timer').html($('#video-description-timer').html() - 1);
+                if(interimTimerPaused == false) {
+                    $('#video-description-timer').html($('#video-description-timer').html() - 1);
+                }
             }
         }
     }, 1000);
@@ -676,41 +705,42 @@ $(document).ready(function () {
                 setTimeout(function () {
                     $('#video1').children('video').get(0).currentTime = '0';
                     $('#video1').children('video').get(0).play();
-                }, 1000);
+                }, 1000);              
 
             };
+            
+            // render the rest screen after prescribed time
+                interimTimerObj = new InterimTimer(function () {
+                    // stop the video
+                    $('#video1').children('video').get(0).pause();
 
-            setTimeout(function () {
-                // stop the video
-                $('#video1').children('video').get(0).pause();
+                    // show the rest screen
+                    /**/
+                    $('#video1').hide();
 
-                // show the rest screen
-                /**/
-                $('#video1').hide();
+                    $('#rest1').fadeIn();
 
-                $('#rest1').fadeIn();
+                    if (videoIndex < 5 || videoIndex > videoSet.length - 5) {
+                        // hide ratings
+                        wasRated = false;
+                        $('.enjoy-rating').hide();
+                        $('.difficulty-rating').hide();
+                        startTimer('#timer1', wasRated, 5);
 
-                if (videoIndex < 5 || videoIndex > videoSet.length - 5) {
-                    // hide ratings
-                    wasRated = false;
-                    $('.enjoy-rating').hide();
-                    $('.difficulty-rating').hide();
-                    startTimer('#timer1', wasRated, 5);
-                    
-                    console.log("---- should NOT be rating because videoIndex = " + videoIndex);
+                        console.log("---- should NOT be rating because videoIndex = " + videoIndex);
+                    } else {
+                        //show ratings
+                        wasRated = true;
+                        $('.enjoy-rating').show();
+                        $('.difficulty-rating').show();
+                        startTimer('#timer1', wasRated, 20);
 
-                } else {
-                    //show ratings
-                    wasRated = true;
-                    $('.enjoy-rating').show();
-                    $('.difficulty-rating').show();
-                    startTimer('#timer1', wasRated, 20);
-                    
-                    console.log("---- SHOULD be rating because videoIndex = " + videoIndex);
-                }
+                        console.log("---- SHOULD be rating because videoIndex = " + videoIndex);
+                    }
+
+                }, Math.abs(videoSet[videoIndex - 1].defaultRequiredTime) * 1000 + 2000);
 
 
-            }, Math.abs(videoSet[videoIndex - 1].defaultRequiredTime) * 1000 + 1000);
         } else {
             // the video is small and repeating the second, third ... n-th time
             $('#video1').children('video').get(0).currentTime = '0';
@@ -731,8 +761,8 @@ $(document).ready(function () {
         }, 100);
     }, false);
 
-    /* Uncomment before deploy  */
-    $('#play-pause-btn').click(function () {
+    /*   */
+    /* $('#play-pause-btn').click(function () {
         var currentVideo = document.getElementById('gwd-video_1');
         if (currentVideo.paused || currentVideo.ended) {
             $(this).html('<img src="../PhysicalTrainer/assets/pause.png" style="height: 100%; margin-left: 0%;">'); // add propper icons for play and pause.
@@ -744,21 +774,28 @@ $(document).ready(function () {
             currentVideo.pause();
         }
     });
-
+   */
     $('#play-btn').click(function () {
         var currentVideo = document.getElementById('gwd-video_1');
         if (currentVideo.paused || currentVideo.ended) {
             currentVideo.play();
+            if(interimTimerObj) {
+                interimTimerObj.resume();
+                interimTimerPaused = false;
+            }
         }
     });
 
     $('#pause-btn').click(function () {
         var currentVideo = document.getElementById('gwd-video_1');
         if (currentVideo.paused || currentVideo.ended) {
-
+            // do nothing
         } else {
-
             currentVideo.pause();
+            if(interimTimerObj) {
+                interimTimerObj.pause();
+                interimTimerPaused = true;
+            }
         }
     });
 
